@@ -1,0 +1,146 @@
+[
+  {
+    "name": "product-mobile",
+    "url": "http://localhost:4180/product/the-vintage-garden-greige",
+    "profile": "mobile",
+    "lighthouseVersion": "13.5.0",
+    "fetchTime": "2026-10-24T20:51:07.804Z",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100,
+      "agentic-browsing": 100
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 802.97265,
+        "display": "0.8 s"
+      },
+      "largest-contentful-paint": {
+        "value": 1726.9452999999999,
+        "display": "1.7 s"
+      },
+      "total-blocking-time": {
+        "value": 0,
+        "display": "0 ms"
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "display": "0"
+      },
+      "speed-index": {
+        "value": 802.97265,
+        "display": "0.8 s"
+      }
+    }
+  },
+  {
+    "name": "product-desktop",
+    "url": "http://localhost:4180/product/the-vintage-garden-greige",
+    "profile": "desktop",
+    "lighthouseVersion": "13.5.0",
+    "fetchTime": "2026-10-24T20:51:13.708Z",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100,
+      "agentic-browsing": 100
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 215.0012,
+        "display": "0.2 s"
+      },
+      "largest-contentful-paint": {
+        "value": 384.0024,
+        "display": "0.4 s"
+      },
+      "total-blocking-time": {
+        "value": 0,
+        "display": "0 ms"
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "display": "0"
+      },
+      "speed-index": {
+        "value": 215.0012,
+        "display": "0.2 s"
+      }
+    }
+  },
+  {
+    "name": "french-product-mobile",
+    "url": "http://localhost:4180/product/the-vintage-garden-greige?lang=fr",
+    "profile": "mobile",
+    "lighthouseVersion": "13.5.0",
+    "fetchTime": "2026-10-24T20:51:19.350Z",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100,
+      "agentic-browsing": 100
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 801.3014,
+        "display": "0.8 s"
+      },
+      "largest-contentful-paint": {
+        "value": 1727.6028000000001,
+        "display": "1.7 s"
+      },
+      "total-blocking-time": {
+        "value": 0,
+        "display": "0 ms"
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "display": "0"
+      },
+      "speed-index": {
+        "value": 801.3014,
+        "display": "0.8 s"
+      }
+    }
+  },
+  {
+    "name": "arabic-product-mobile",
+    "url": "http://localhost:4180/product/the-vintage-garden-greige?lang=ar",
+    "profile": "mobile",
+    "lighthouseVersion": "13.5.0",
+    "fetchTime": "2026-10-24T20:51:24.804Z",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100,
+      "agentic-browsing": 100
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 832.08035,
+        "display": "0.8 s"
+      },
+      "largest-contentful-paint": {
+        "value": 1802.1607,
+        "display": "1.8 s"
+      },
+      "total-blocking-time": {
+        "value": 0,
+        "display": "0 ms"
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "display": "0"
+      },
+      "speed-index": {
+        "value": 832.08035,
+        "display": "0.8 s"
+      }
+    }
+  }
+]

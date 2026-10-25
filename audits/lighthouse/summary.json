@@ -1,0 +1,355 @@
+{
+  "tested_origin": "http://localhost:4180",
+  "version": "13.5.0",
+  "source_sha256": {
+    "server.py": "7e667fe574a7df3df7318a170d4ce15fd5f192c451c371f7a027edba7d86ee82",
+    "the-vintage-garden/index.html": "9a85ae9ae64a2b529a92eca76d98c99c3373f4d0ebe294f869539324b08e0675"
+  },
+  "results": [
+    {
+      "name": "home-mobile",
+      "url": "http://localhost:4180/",
+      "profile": "mobile",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-24T20:38:50.487Z",
+      "lcp_ms": 1652.7717,
+      "cls": 0,
+      "tbt_ms": 0,
+      "source_sha256": {
+        "server.py": "7e667fe574a7df3df7318a170d4ce15fd5f192c451c371f7a027edba7d86ee82",
+        "the-vintage-garden/index.html": "2739d279d60dc94835333717b938e480343dd02ae4ad5c327177fa9387536668"
+      }
+    },
+    {
+      "name": "home-desktop",
+      "url": "http://localhost:4180/",
+      "profile": "desktop",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-24T20:39:01.741Z",
+      "lcp_ms": 383.3959,
+      "cls": 0,
+      "tbt_ms": 0,
+      "source_sha256": {
+        "server.py": "7e667fe574a7df3df7318a170d4ce15fd5f192c451c371f7a027edba7d86ee82",
+        "the-vintage-garden/index.html": "2739d279d60dc94835333717b938e480343dd02ae4ad5c327177fa9387536668"
+      }
+    },
+    {
+      "name": "product-mobile",
+      "url": "http://localhost:4180/product/the-vintage-garden-greige",
+      "profile": "mobile",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-24T20:51:07.804Z",
+      "lcp_ms": 1726.9452999999999,
+      "cls": 0,
+      "tbt_ms": 0,
+      "source_sha256": {
+        "server.py": "7e667fe574a7df3df7318a170d4ce15fd5f192c451c371f7a027edba7d86ee82",
+        "the-vintage-garden/index.html": "9a85ae9ae64a2b529a92eca76d98c99c3373f4d0ebe294f869539324b08e0675"
+      }
+    },
+    {
+      "name": "product-desktop",
+      "url": "http://localhost:4180/product/the-vintage-garden-greige",
+      "profile": "desktop",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-24T20:51:13.708Z",
+      "lcp_ms": 384.0024,
+      "cls": 0,
+      "tbt_ms": 0,
+      "source_sha256": {
+        "server.py": "7e667fe574a7df3df7318a170d4ce15fd5f192c451c371f7a027edba7d86ee82",
+        "the-vintage-garden/index.html": "9a85ae9ae64a2b529a92eca76d98c99c3373f4d0ebe294f869539324b08e0675"
+      }
+    },
+    {
+      "name": "shop-mobile",
+      "url": "http://localhost:4180/shop",
+      "profile": "mobile",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-24T20:39:33.515Z",
+      "lcp_ms": 1577.4322,
+      "cls": 0,
+      "tbt_ms": 0,
+      "source_sha256": {
+        "server.py": "7e667fe574a7df3df7318a170d4ce15fd5f192c451c371f7a027edba7d86ee82",
+        "the-vintage-garden/index.html": "2739d279d60dc94835333717b938e480343dd02ae4ad5c327177fa9387536668"
+      }
+    },
+    {
+      "name": "shop-desktop",
+      "url": "http://localhost:4180/shop",
+      "profile": "desktop",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-24T20:39:44.165Z",
+      "lcp_ms": 361.4155,
+      "cls": 0,
+      "tbt_ms": 0,
+      "source_sha256": {
+        "server.py": "7e667fe574a7df3df7318a170d4ce15fd5f192c451c371f7a027edba7d86ee82",
+        "the-vintage-garden/index.html": "2739d279d60dc94835333717b938e480343dd02ae4ad5c327177fa9387536668"
+      }
+    },
+    {
+      "name": "collections-mobile",
+      "url": "http://localhost:4180/collections",
+      "profile": "mobile",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-24T20:39:54.850Z",
+      "lcp_ms": 1502.2183,
+      "cls": 0,
+      "tbt_ms": 0,
+      "source_sha256": {
+        "server.py": "7e667fe574a7df3df7318a170d4ce15fd5f192c451c371f7a027edba7d86ee82",
+        "the-vintage-garden/index.html": "2739d279d60dc94835333717b938e480343dd02ae4ad5c327177fa9387536668"
+      }
+    },
+    {
+      "name": "story-mobile",
+      "url": "http://localhost:4180/story",
+      "profile": "mobile",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-24T20:40:05.484Z",
+      "lcp_ms": 1505.4232,
+      "cls": 0,
+      "tbt_ms": 0,
+      "source_sha256": {
+        "server.py": "7e667fe574a7df3df7318a170d4ce15fd5f192c451c371f7a027edba7d86ee82",
+        "the-vintage-garden/index.html": "2739d279d60dc94835333717b938e480343dd02ae4ad5c327177fa9387536668"
+      }
+    },
+    {
+      "name": "contact-mobile",
+      "url": "http://localhost:4180/contact",
+      "profile": "mobile",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-24T20:40:15.939Z",
+      "lcp_ms": 1354.9519,
+      "cls": 0,
+      "tbt_ms": 0,
+      "source_sha256": {
+        "server.py": "7e667fe574a7df3df7318a170d4ce15fd5f192c451c371f7a027edba7d86ee82",
+        "the-vintage-garden/index.html": "2739d279d60dc94835333717b938e480343dd02ae4ad5c327177fa9387536668"
+      }
+    },
+    {
+      "name": "help-mobile",
+      "url": "http://localhost:4180/help",
+      "profile": "mobile",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-24T20:40:26.451Z",
+      "lcp_ms": 1360.1649,
+      "cls": 0,
+      "tbt_ms": 0,
+      "source_sha256": {
+        "server.py": "7e667fe574a7df3df7318a170d4ce15fd5f192c451c371f7a027edba7d86ee82",
+        "the-vintage-garden/index.html": "2739d279d60dc94835333717b938e480343dd02ae4ad5c327177fa9387536668"
+      }
+    },
+    {
+      "name": "privacy-mobile",
+      "url": "http://localhost:4180/privacy",
+      "profile": "mobile",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-24T20:40:36.954Z",
+      "lcp_ms": 1354.4867,
+      "cls": 0,
+      "tbt_ms": 0,
+      "source_sha256": {
+        "server.py": "7e667fe574a7df3df7318a170d4ce15fd5f192c451c371f7a027edba7d86ee82",
+        "the-vintage-garden/index.html": "2739d279d60dc94835333717b938e480343dd02ae4ad5c327177fa9387536668"
+      }
+    },
+    {
+      "name": "royal-blue-mobile",
+      "url": "http://localhost:4180/product/the-vintage-garden-royal-blue",
+      "profile": "mobile",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-24T20:40:47.396Z",
+      "lcp_ms": 1589.2907,
+      "cls": 0,
+      "tbt_ms": 0,
+      "source_sha256": {
+        "server.py": "7e667fe574a7df3df7318a170d4ce15fd5f192c451c371f7a027edba7d86ee82",
+        "the-vintage-garden/index.html": "2739d279d60dc94835333717b938e480343dd02ae4ad5c327177fa9387536668"
+      }
+    },
+    {
+      "name": "rosette-mobile",
+      "url": "http://localhost:4180/product/rosette-yellow",
+      "profile": "mobile",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-24T20:40:58.093Z",
+      "lcp_ms": 1583.4417,
+      "cls": 0,
+      "tbt_ms": 0,
+      "source_sha256": {
+        "server.py": "7e667fe574a7df3df7318a170d4ce15fd5f192c451c371f7a027edba7d86ee82",
+        "the-vintage-garden/index.html": "2739d279d60dc94835333717b938e480343dd02ae4ad5c327177fa9387536668"
+      }
+    },
+    {
+      "name": "shadha-mobile",
+      "url": "http://localhost:4180/product/shadha-beige",
+      "profile": "mobile",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-24T20:41:08.788Z",
+      "lcp_ms": 1727.1417000000001,
+      "cls": 0,
+      "tbt_ms": 0,
+      "source_sha256": {
+        "server.py": "7e667fe574a7df3df7318a170d4ce15fd5f192c451c371f7a027edba7d86ee82",
+        "the-vintage-garden/index.html": "2739d279d60dc94835333717b938e480343dd02ae4ad5c327177fa9387536668"
+      }
+    },
+    {
+      "name": "french-product-mobile",
+      "url": "http://localhost:4180/product/the-vintage-garden-greige?lang=fr",
+      "profile": "mobile",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-24T20:51:19.350Z",
+      "lcp_ms": 1727.6028000000001,
+      "cls": 0,
+      "tbt_ms": 0,
+      "source_sha256": {
+        "server.py": "7e667fe574a7df3df7318a170d4ce15fd5f192c451c371f7a027edba7d86ee82",
+        "the-vintage-garden/index.html": "9a85ae9ae64a2b529a92eca76d98c99c3373f4d0ebe294f869539324b08e0675"
+      }
+    },
+    {
+      "name": "arabic-product-mobile",
+      "url": "http://localhost:4180/product/the-vintage-garden-greige?lang=ar",
+      "profile": "mobile",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-24T20:51:24.804Z",
+      "lcp_ms": 1802.1607,
+      "cls": 0,
+      "tbt_ms": 0,
+      "source_sha256": {
+        "server.py": "7e667fe574a7df3df7318a170d4ce15fd5f192c451c371f7a027edba7d86ee82",
+        "the-vintage-garden/index.html": "9a85ae9ae64a2b529a92eca76d98c99c3373f4d0ebe294f869539324b08e0675"
+      }
+    }
+  ],
+  "latest_verification": {
+    "scope": "Product purchase layout, sticky preorder action, English/French/Arabic",
+    "cases": [
+      "arabic-product-mobile",
+      "french-product-mobile",
+      "product-desktop",
+      "product-mobile"
+    ]
+  }
+}

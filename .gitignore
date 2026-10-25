@@ -1,0 +1,13 @@
+.env
+.foulara-data/
+__pycache__/
+.playwright-mcp/
+.DS_Store
+node_modules/
+dist/
+generated/
+.wrangler/
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+*.log

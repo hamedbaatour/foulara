@@ -1,0 +1,6 @@
+# Copy to .dev.vars for local Workers development. Never commit real credentials.
+# In production, add these as encrypted Worker secrets in the Cloudflare dashboard.
+SMTP_USER=
+SMTP_PASSWORD=
+# Optional; defaults to SMTP_USER. Must be allowed by the Gmail sending account.
+SMTP_FROM=

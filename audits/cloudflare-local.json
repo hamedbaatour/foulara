@@ -1,0 +1,46 @@
+{
+  "scope": "Local Cloudflare Workers runtime; main product page only. Not production measurements.",
+  "source_sha256": {
+    "the-vintage-garden/index.html": "9a85ae9ae64a2b529a92eca76d98c99c3373f4d0ebe294f869539324b08e0675",
+    "wrangler.jsonc": "27431db5fde65b4d882fb1c7f3382fad526f3703d85e9bca27e7326599cba489",
+    "worker/catalog.js": "b283a52212ae12c54db3cd3cb758ae2a810c60d90d6a72db65bad70c4c482532",
+    "worker/index.js": "a681faad9044d49abebf9284648444503270899bb52dd1fe27c7a64333e9c8d5",
+    "worker/requests.js": "61d62c81d772e6951e951a446764354f2372e290f4031b71e05e490c066f602b",
+    "worker/validation.js": "84eb304d114e45004ec604f28e1bd4e20cbaaa118d085a2635f0dc283645dd4e",
+    "scripts/build.mjs": "979fe9793cbe8203024265201fe8cc6449e20d2c238dcd0145558829069c8733"
+  },
+  "results": [
+    {
+      "profile": "mobile",
+      "url": "http://localhost:8787/product/the-vintage-garden-greige",
+      "fetchTime": "2026-10-25T16:54:43.675Z",
+      "lighthouseVersion": "13.5.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lcp_ms": 1677.0005999999998,
+      "cls": 0,
+      "tbt_ms": 0
+    },
+    {
+      "profile": "desktop",
+      "url": "http://localhost:8787/product/the-vintage-garden-greige",
+      "fetchTime": "2026-10-25T16:54:59.087Z",
+      "lighthouseVersion": "13.5.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lcp_ms": 401.4546,
+      "cls": 0,
+      "tbt_ms": 0
+    }
+  ]
+}

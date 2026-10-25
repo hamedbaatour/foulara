@@ -1,0 +1,4 @@
+* text=auto
+# Preserve the exact generated reports; their embedded templates contain whitespace.
+audits/lighthouse/*.html -whitespace linguist-generated=true
+audits/lighthouse/*.json linguist-generated=true

@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "foulara",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-25",
+  "compatibility_flags": ["nodejs_compat"],
+  "build": { "command": "npm run build" },
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "html_handling": "none",
+    "run_worker_first": ["/*", "!/assets/*"]
+  },
+  "durable_objects": {
+    "bindings": [{ "name": "REQUESTS", "class_name": "CustomerRequest" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["CustomerRequest"] }],
+  "observability": { "enabled": true }
+}
