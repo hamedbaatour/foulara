@@ -87,7 +87,8 @@ Each notification includes the reference, customer details, language, product va
 
 - Home, collection listing, four product variants, search, material filters, price sorting, saved items, preorder bag, checkout, confirmation, story, contact, preorder guide, and privacy information.
 - English, French, and Arabic, with right-to-left Arabic layouts. Language and currency choices persist on the device.
-- USD is the default. EUR and TND estimates are also available.
+- `ca.foulara.com` defaults to CAD and `us.foulara.com` defaults to USD. Explicit currency choices are remembered separately for each market domain, so an older generic USD preference cannot override Canada's default. Other domains default to USD and retain the existing currency preference behavior. CAD, EUR and TND estimates are available in the selector.
+- CAD uses an indicative reference conversion of 1 USD = 1.3993 CAD from the [Bank of Canada's 23 October 2026 daily rate](https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates-lookup/?dF=2026-10-23&dT=2026-10-23&se=FXUSDCAD). This is a stored estimate, not a live feed. Product, bag and checkout amounts all use the same conversion. Server catalogue prices remain authoritative in USD; notifications retain the customer's selected display currency.
 - All products are sold out. A preorder is a request for review, not a guaranteed stock reservation or a paid order.
 - USD product estimates are $17.32 for each Vintage Garden variant, $13.33 for Rosette +, and $9.33 for Shadha. They derive from the original TND prices and a 24 October 2026 conversion reference. Final pricing, availability, delivery, and terms require confirmation before payment.
 - Product prices are enforced by the server; amounts supplied by a browser are ignored.

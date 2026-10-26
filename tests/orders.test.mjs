@@ -9,6 +9,14 @@ test('the server enforces catalogue prices and strips client-controlled prices',
   assert.equal(result.total_usd_cents, 3464);
   assert.equal(result.items[0].usd_cents, 1732);
 });
+test('Canadian preorder requests retain CAD while authoritative prices remain in USD', () => {
+  const result = validate({...request(), currency: 'CAD'}, 'preorder');
+  assert.equal(result.currency, 'CAD');
+  assert.equal(result.total_usd_cents, 3464);
+  const mail = notification({kind: 'preorder', reference: 'FL-CAD-TEST', payload: result}, 'sender@example.com');
+  assert.match(mail.text, /Display currency: CAD/);
+  assert.throws(() => validate({...request(), currency: 'BTC'}, 'preorder'));
+});
 test('reject unknown products, duplicate variants, excess quantities and absent consent', () => {
   for (const update of [{consent: false}, {items: [{id: 'unknown', quantity: 1}]}, {items: [{id: '__proto__', quantity: 1}]}, {items: [{id: 'shadha-beige', quantity: 10}]}, {items: [{id: 'shadha-beige', quantity: 1}, {id: 'shadha-beige', quantity: 2}]}]) {
     assert.throws(() => validate({...request(), ...update}, 'preorder'));

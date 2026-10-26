@@ -214,7 +214,7 @@ def validate(data, kind):
     if kind == 'message':
         result.update(subject=text(data, 'subject', 160), message=text(data, 'message', 4000))
         return result
-    if data.get('consent') is not True or data.get('currency') not in ('USD', 'EUR', 'TND'):
+    if data.get('consent') is not True or data.get('currency') not in ('USD', 'CAD', 'EUR', 'TND'):
         raise ValueError('consent')
     result.update(country=text(data, 'country', 100), phone=text(data, 'phone', 50, False),
                   notes=text(data, 'notes', 2000, False), currency=data['currency'])

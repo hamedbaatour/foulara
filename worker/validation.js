@@ -11,7 +11,7 @@ export function validate(data, kind) {
   const result = {name: text(data, 'name', 120), email: text(data, 'email', 254), language: data.language || 'en'};
   if (!/^[^\s<>@]+@[^\s<>@]+\.[^\s<>@]+$/.test(result.email) || !LANGUAGES.includes(result.language)) throw new Error('email_or_language');
   if (kind === 'message') return {...result, subject: text(data, 'subject', 160), message: text(data, 'message', 4000)};
-  if (data.consent !== true || !['USD', 'EUR', 'TND'].includes(data.currency)) throw new Error('consent_or_currency');
+  if (data.consent !== true || !['USD', 'CAD', 'EUR', 'TND'].includes(data.currency)) throw new Error('consent_or_currency');
   Object.assign(result, {country: text(data, 'country', 100), phone: text(data, 'phone', 50, false), notes: text(data, 'notes', 2000, false), currency: data.currency});
   if (!Array.isArray(data.items) || data.items.length < 1 || data.items.length > 4) throw new Error('items');
   const seen = new Set();
