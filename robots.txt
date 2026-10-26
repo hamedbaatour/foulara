@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /checkout
+Disallow: /saved
+Disallow: /confirmation
+Sitemap: https://foulara.pages.dev/sitemap.xml

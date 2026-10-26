@@ -40,3 +40,14 @@ test('build emits small HTML and actual cacheable media, without credentials', a
     assert.ok((await stat('dist' + url)).size > 0);
   }
 });
+test('the repository-root Pages entry opens the storefront directly with deployed media', async () => {
+  const html = await readFile('index.html', 'utf8');
+  assert.doesNotMatch(html, /http-equiv="refresh"|Open FOULARA/);
+  assert.match(html, /home-title/);
+  assert.ok(Buffer.byteLength(html) < 200_000);
+  const site = JSON.parse(await readFile('generated/site-data.json', 'utf8'));
+  assert.ok((await stat('.' + site.images['DSC04216-960'])).size > 0);
+  const redirects = await readFile('_redirects', 'utf8');
+  assert.match(redirects, /\/product\/\* \/ 200/);
+  assert.doesNotMatch(redirects, / 404/);
+});

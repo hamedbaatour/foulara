@@ -2,6 +2,10 @@
 
 ## Cloudflare Workers deployment
 
+The existing `foulara.pages.dev` Pages deployment publishes the repository root. To support it, `npm run build` also generates a root `index.html`, `assets/`, routing rules and crawler files. This static mirror is checked in so the homepage works even when the Pages project has no build command. Edit `the-vintage-garden/index.html` and rebuild instead of editing the generated root file. The root entry renders the storefront directly, without a meta-refresh redirect or an intermediate “Open FOULARA” link.
+
+Pages serves the visual storefront and internal routes. Preorder/contact persistence and Gmail notifications require the Workers deployment described below; static hosting alone cannot execute that backend. Unknown `/api/*` requests on the static Pages mirror fail instead of showing a false order confirmation. The existing Pages project is in a different Cloudflare account from the locally connected account, so its dashboard settings have not been changed.
+
 This repository is ready for **Cloudflare Workers with Static Assets**, including the preorder/contact API. It does not require a Python server in production. The editable frontend remains `the-vintage-garden/index.html`; the Node build extracts embedded images and fonts into `dist/assets` and creates the deployable HTML. Only `dist/` becomes public static hosting. Source files, credentials, customer storage, tests and audit reports are not public assets.
 
 Connect `hamedbaatour/foulara` in **Workers & Pages → Create → Import a repository** and use:
