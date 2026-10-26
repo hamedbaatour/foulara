@@ -22,6 +22,7 @@ export function validate(data, kind) {
     return {id: item.id, quantity: item.quantity, ...product};
   });
   result.total_usd_cents = result.items.reduce((sum, item) => sum + item.usd_cents * item.quantity, 0);
+  result.total_cad_cents = result.items.reduce((sum, item) => sum + item.cad_cents * item.quantity, 0);
   return result;
 }
 
@@ -31,8 +32,14 @@ export function notification(record, sender) {
   const lines = [kind, `Reference: ${record.reference}`, `Received (UTC): ${record.created_at}`, '', `Name: ${p.name}`, `Email: ${p.email}`, `Language: ${p.language}`];
   if (record.kind === 'preorder') {
     lines.push(`Country: ${p.country}`, `Phone: ${p.phone || 'Not supplied'}`, '', 'Items:');
-    for (const item of p.items) lines.push(`${item.quantity} × ${item.name} / ${item.color} / 180 × 70 cm / $${(item.usd_cents / 100).toFixed(2)} USD each`);
-    lines.push('', `Estimated subtotal: $${(p.total_usd_cents / 100).toFixed(2)} USD`, `Display currency: ${p.currency}`, 'SOLD OUT / PREORDER REQUEST. No payment collected.', 'Availability, delivery charges and final terms require confirmation before payment.', '', `Notes: ${p.notes || 'None'}`);
+    const canadian = p.currency === 'CAD';
+    // Older queued requests retain the conversion used when they were recorded.
+    for (const item of p.items) {
+      const cents = canadian ? item.cad_cents ?? Math.round(item.usd_cents * 1.3993) : item.usd_cents;
+      lines.push(`${item.quantity} × ${item.name} / ${item.color} / 180 × 70 cm / $${(cents / 100).toFixed(2)} ${canadian ? 'CAD' : 'USD'} each`);
+    }
+    const total = canadian ? p.total_cad_cents ?? Math.round(p.total_usd_cents * 1.3993) : p.total_usd_cents;
+    lines.push('', `Estimated subtotal: $${(total / 100).toFixed(2)} ${canadian ? 'CAD' : 'USD'}`, `Display currency: ${p.currency}`, 'SOLD OUT / PREORDER REQUEST. No payment collected.', 'Availability, delivery charges and final terms require confirmation before payment.', '', `Notes: ${p.notes || 'None'}`);
   } else lines.push('', `Subject: ${p.subject}`, '', p.message);
   return {from: {name: 'FOULARA', address: sender}, to: 'mouyahama@gmail.com', replyTo: p.email, subject: `FOULARA | ${kind} | ${record.reference}`, messageId: `<${record.reference}@foulara.preorder>`, text: lines.join('\n')};
 }

@@ -36,10 +36,10 @@ for line in (ROOT / '.env').read_text().splitlines() if (ROOT / '.env').exists()
 RECIPIENT = 'mouyahama@gmail.com'
 DATA = Path(os.getenv('FOULARA_DATA_DIR', str(ROOT / '.foulara-data')))
 CATALOG = {
-    'the-vintage-garden-greige': {'name': 'The Vintage Garden', 'color': 'Greige', 'usd_cents': 1732},
-    'the-vintage-garden-royal-blue': {'name': 'The Vintage Garden', 'color': 'Royal Blue', 'usd_cents': 1732},
-    'rosette-yellow': {'name': 'Rosette +', 'color': 'Yellow', 'usd_cents': 1333},
-    'shadha-beige': {'name': 'Shadha', 'color': 'Beige', 'usd_cents': 933},
+    'the-vintage-garden-greige': {'name': 'The Vintage Garden', 'color': 'Greige', 'usd_cents': 2500, 'cad_cents': 3500},
+    'the-vintage-garden-royal-blue': {'name': 'The Vintage Garden', 'color': 'Royal Blue', 'usd_cents': 2500, 'cad_cents': 3500},
+    'rosette-yellow': {'name': 'Rosette +', 'color': 'Yellow', 'usd_cents': 1900, 'cad_cents': 2700},
+    'shadha-beige': {'name': 'Shadha', 'color': 'Beige', 'usd_cents': 1500, 'cad_cents': 2100},
 }
 WAKE = threading.Event()
 STOP = threading.Event()
@@ -142,9 +142,13 @@ def send_notification(record):
              f"Language: {payload['language']}"]
     if record['kind'] == 'preorder':
         lines += [f"Country: {payload['country']}", f"Phone: {payload.get('phone') or 'Not supplied'}", '', 'Items:']
+        canadian = payload['currency'] == 'CAD'
+        price_currency = 'CAD' if canadian else 'USD'
         for item in payload['items']:
-            lines.append(f"  {item['quantity']} × {item['name']} / {item['color']} / 180 × 70 cm / ${item['usd_cents'] / 100:.2f} USD each")
-        lines += ['', f"Estimated product subtotal: ${payload['total_usd_cents'] / 100:.2f} USD",
+            cents = item.get('cad_cents', round(item['usd_cents'] * 1.3993)) if canadian else item['usd_cents']
+            lines.append(f"  {item['quantity']} × {item['name']} / {item['color']} / 180 × 70 cm / ${cents / 100:.2f} {price_currency} each")
+        total = payload.get('total_cad_cents', round(payload['total_usd_cents'] * 1.3993)) if canadian else payload['total_usd_cents']
+        lines += ['', f"Estimated product subtotal: ${total / 100:.2f} {price_currency}",
                   f"Customer display currency: {payload['currency']}",
                   'Status: SOLD OUT / PREORDER REQUEST',
                   'No payment collected. Availability, delivery, charges and final terms require confirmation.',
@@ -231,6 +235,7 @@ def validate(data, kind):
         seen.add(product_id)
         result['items'].append({'id': product_id, 'quantity': quantity, **CATALOG[product_id]})
     result['total_usd_cents'] = sum(item['usd_cents'] * item['quantity'] for item in result['items'])
+    result['total_cad_cents'] = sum(item['cad_cents'] * item['quantity'] for item in result['items'])
     return result
 
 
